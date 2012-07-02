@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Schedule</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/jquery.mobile-1.1.0.min.css" />
+	<link rel="stylesheet" href="css/themes/HostingCon.css" />
+	<link rel="stylesheet" href="css/main.css?v=30" />
+	<link rel="apple-touch-icon" href="http://stage.m.hostingcon.com/apple-touch-icon-precomposed.png" />
+	<link rel="apple-touch-icon-precomposed" href="http://stage.m.hostingcon.com/apple-touch-icon-precomposed.png"/>
+    <link rel='apple-touch-startup-image' href="http://stage.m.hostingcon.com/apple-touch-icon-precomposed.png" />
+    <link href='http://stage.m.hostingcon.com/ic_fav_alpha_32.png' rel='icon' type='image/png' />
+	<script src="js/jquery-1.7.1.min.js"></script>
+	<script src="js/jquery.mobile-1.1.0.min.js"></script>
+	<script type="text/javascript" src="js/app.js?v=30"></script>
+
+	<script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-256751-52']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+
+	</script>
+</head>
+<body>
+
+	<div id="menu"><!--#include file="menu.html" --></div>
+
+	<div data-role="page" id="main" class="schedule" data-theme="a">
+
+		<div data-role="header">
+			<a href="#" class="showMenu menuBtn">Menu</a>
+			<h1><a href="/">HostingCon 2012</a></h1>
+			<a href="#" id="track-select" data-mini="true">Track</a>
+			<ul id="track-menu" data-role="listview" data-theme="b">
+				<li id="All">All</li>
+				<li id="Sales_and_Marketing">Sales & Marketing</li>
+				<li id="Industry_Trends">Industry Trends</li>
+				<li id="Technology">Technology</li>
+				<li id="Management">Management</li>
+			</ul>
+		</div><!-- /header -->
+		<div class="sponsor"><!--#include file="sponsor.html" --></div>
+
+
+
+		<div id="track" class="ui-bar ui-grid-b ui-footer ui-bar-b" >Viewing Track: <span>ALL</span></div>
+
+		<div data-role="content" data-theme="a">
+
+			<!-- get current day and make default, otherwise make day monday -->
+			<ul id="tab-nav">
+				<li><a href="#monday" data-tab="monday" data-role="button" data-theme="c"  class="active" data-mini="true" data-inline="true">Monday</a></li>
+				<li><a href="#tuesday" data-tab="tuesday" data-role="button" data-theme="c" data-mini="true" data-inline="true">Tuesday</a></li>
+				<li><a href="#wednesday" data-tab="wednesday" data-role="button" data-theme="c" data-mini="true" data-inline="true">Wednesday</a></li>
+			</ul>
+
+			<div id="tab-content">
+
+				<div id="monday" class="active tab schedule-wrap"><!-- AARON TODO: give me an active class if today's the day -->
+					<ul data-role="listview" data-theme="b">
+						<li class="All">
+							<div class="time">7:30 - 5:00am</div>
+							<div class="sesh">
+								<h3>Registration Open</h3>
+							</div>
+						</li>
+						<li class="All">
+							<div class="time">8:00 - 10:00am</div>
+							<div class="sesh">
+								<h3>Breakfast</h3>
+							</div>
+						</li>
+						<li class="Sales_and_Marketing">
+							<div class="time">9:00 - 9:45am</div>
+							<div class="sesh">
+								<a href="#inline_205">
+									<h3>Some Content Helps, Some Content Hurts</h3>
+									<span class='location'>Location</span>
+								</a>
+							</div>
+							<a href="#main" data-role="button" data-mini="true" data-icon="false">Give Feedback</a>
+						</li>
+						<li class="Industry_Trends">
+							<div class="time">9:00 - 9:45am</div>
+							<div class="sesh">
+								<a href="#inline_2227">
+									<h3>Hosting Industry Market Overview</h3>
+									<span class='location'>Location</span>
+								</a>
+							</div>
+							<a href="#main" data-role="button" data-mini="true" data-icon="false">Give Feedback</a>
+						</li>
+						<li class="Technology">
+							<div class="time">9:00 - 9:45am</div>
+							<div class="sesh">
+								<a href="#inline_210">
+									<h3>Integrating your products to take your company to the next level</h3>
+									<span class='location'>Location</span>
+								</a>
+							</div>
+							<a href="#main" data-role="button" data-mini="true" data-icon="false">Give Feedback</a>
+						</li>
+						<li class="Management">
+							<div class="time">9:00 - 9:45am</div>
+							<div class="sesh">
+								<a href="#inline_219">
+									<h3>Expert Tips to Use Inbound Marketing and Social Media for Lead Generation</h3>
+									<span class='location'>Location</span>
+								</a>
+							</div>
+							<a href="#main" data-role="button" data-mini="true" data-icon="false">Give Feedback</a>
+						</li>
+						<li class="Sales_and_Marketing">
+							<div class="time">10:00 - 10:45am</div>
+							<div class="sesh">
+								<a href="#inline_204">
+									<h3>Partnerships Done Right</h3>
+									<span class='location'>Location</span>
+								</a>
+							</div>
+							<a href="#main" data-role="button" data-mini="true" data-icon="false">Give Feedback</a>
+						</li>
+						<li class="Sales_and_Marketing">
+							<div class="time">10:00 - 10:45am</div>
+							<div class="sesh">
+								<a href="#inline_228">
+									<h3>One Cloud Isn’t Enough: Competing Against Amazon in a Commoditizing Cloud Market</h3>
+									<span class='location'>Location</span>
+								</a>
+							</div>
+							<a href="#main" data-role="button" data-mini="true" data-icon="false">Give Feedback</a>
+						</li>
+					</ul>
+				</div>
+
+				<div id="tuesday" class="tab">
+					<ul>
+						<li>tuesday<li>
+					</ul>
+				</div>
+
+				<div id="wednesday" class="tab">
+					<ul>
+						<li>wednesday</li>
+					</ul>
+				</div>
+
+			</div>
+
+		</div><!-- /content -->
+
+
+	</div><!-- /page -->
+
+	<!-- Start of session: inline_205 -->
+	<div data-role="page" id="inline_205" class="schedule session" data-theme="a">
+
+		<div data-role="header" class="header">
+			<a href="#main" data-direction="reverse" data-role="button" data-theme="c" data-icon="arrow-l" data-iconpos="notext" data-mini="true" data-inline="true"> </a>
+			<h1><a href="/">HostingCon 2012</a></h1>
+		</div><!-- /header -->
+		<div class="sponsor"><!--#include file="sponsor.html" --></div>
+
+		<div data-role="content" data-theme="c">
+			<div class="headline">
+				<h2>Some Content Helps, Some Content Hurts</h2>
+				<div class="time">10:00 - 10:45am Location</div>
+			</div>
+			<div class="description">
+				<p>Our journey starts in 2008. In this session, you’ll learn how the image of content has changed over the years, and how Google's many algorithms and functions have been modified to react differently to different aspects of content. In this session, you’ll gain: Meaningful, actionable next steps to turn any site into a stronger SEO performer; High-level perspective on how content is interwoven with the larger picture of SEO; Insight into duplicate content, low quality content, canonical link schemes, what content is needed to recover from Panda and much, much more</p>
+			</div>
+			<a href="/speakers.html#JimCiampaglio" rel="external" target="_blank" data-role="button" data-theme="b" data-icon="arrow-r" data-iconpos="right">Philbert Shih</a>
+			<a href="#" data-role="button" data-theme="b" data-mini="true" data-icon="false">Give Feedback</a>
+
+		</div><!-- /content -->
+
+	</div><!-- /sesh inline_205 -->
+
+</body>
+</html>
