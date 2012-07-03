@@ -19,7 +19,7 @@ body{
 		display: block;
 		width: 156px;
 		height: 33px;
-		margin: 8px auto 5px;
+		margin: 3px auto;
 		background: url(/images/macforums.png) top left no-repeat;
 		text-indent: -5000em;
 	}
@@ -212,6 +212,24 @@ body{
 	.ui-content .ui-listview {
 		margin: 0;
 	}
+
+
+	/* Theme Overrides
+	-----------------------------------------------------------------------------------------------------------*/
+	/* Buttons
+	----------------------------------------------*/	
+	.ui-btn-up-b {
+		background-image: -webkit-gradient(linear, left top, left bottom, from( #FFFFFF /*{b-bup-background-start}*/), to( #F8F7F7 /*{b-bup-background-end}*/)); /* Saf4+, Chrome */
+		background-image: -webkit-linear-gradient( #FFFFFF /*{b-bup-background-start}*/, #F8F7F7 /*{b-bup-background-end}*/); /* Chrome 10+, Saf5.1+ */
+		background-image:    -moz-linear-gradient( #FFFFFF /*{b-bup-background-start}*/, #F8F7F7 /*{b-bup-background-end}*/); /* FF3.6 */
+		background-image:     -ms-linear-gradient( #FFFFFF /*{b-bup-background-start}*/, #F8F7F7 /*{b-bup-background-end}*/); /* IE10 */
+		background-image:      -o-linear-gradient( #FFFFFF /*{b-bup-background-start}*/, #F8F7F7 /*{b-bup-background-end}*/); /* Opera 11.10+ */
+		background-image:         linear-gradient( #FFFFFF /*{b-bup-background-start}*/, #F8F7F7 /*{b-bup-background-end}*/);
+	}
+	.ui-header .ui-btn-icon-notext .ui-btn-inner .ui-icon {
+		background-color: #A90B19;
+	}
+
 
 	/* Home Page
 	-----------------------------------------------------------------------------------------------------------*/
@@ -623,6 +641,7 @@ body{
 	.connect-search .ui-icon-arrow-r {
 		background: url("http://www.hostingcon.com/wp-content/themes/2012/images/sprite-icons.png") 2px -511px no-repeat;
 	}
+
 
 
 	/* Navigation Slider
