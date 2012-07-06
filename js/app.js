@@ -2,6 +2,11 @@ $(document).bind("mobileinit", function(){
 	$.mobile.pushStateEnabled = true;
 });
 
+  $('.ui-content a[href^=#]').bind('click vclick', function (ev) {
+        location.hash = $(this).attr('href');
+        return false;
+    });
+
 
 $(document).delegate("#main", "pageinit", function() {
 	var menuStatus;
@@ -65,14 +70,6 @@ $('div[data-role="navbar"] a').live('click', function () {
 	$('div#' + $(this).attr('data-href')).show();
 });
 
-// Link to exhibitor detail pages
-/*$('.exhibitor-list li ul li').click(function(){
-	var anchor = $(this).find('h3').html();
-	anchor = anchor.replace(/\s+/g, '');
-	window.location.hash = anchor;
-});
-*/
-
 // Link to schedule detail pages
 $('#schedule-grid li').click(function(){
 	var anchor = $(this).attr('id');
@@ -84,19 +81,6 @@ $(document).delegate(".alpha-list", "pageinit", function() {
 	$('#slider').sliderNav({arrows: true});
 });
 
-//$(document).on(".schedule", "pageinit", function() {
-//});
-/*
-function deluxeClick(){
-			$("#suites").hide();
-			$("#deluxe").show();
-		}
-
-		function suitesClick(){
-			$("#deluxe").hide();
-			$("#suites").show();
-		}
-*/
 $(function() {
 	$(document).delegate('#tab-nav a', 'click', function() {
 	    $('#tab-nav a').removeClass("active");
@@ -135,3 +119,31 @@ $(function() {
 $(document).delegate(".gps_map", "pageinit", function() {
 	$.mobile.hidePageLoadingMsg();
 });
+
+//Infinite Scroller
+function initInfScroller(){
+	$('.infScroll').infinitescroll({
+	    navSelector  : ".loadMoreButton",            
+	    nextSelector : ".infscrtrigger a",    
+	    itemSelector : "#results li",
+	    loading:{finishedMsg:'',msgText:'Loading...' },
+	    doneText: "",
+	    localMode:true
+		},function(addedItems){
+			if(addedItems && addedItems.length >0){
+				$("<li>/").addClass("admob inlineAd").insertBefore(addedItems[addedItems.length-2]);
+				var ord=Math.random()*10000000000000000;
+				var url="http://ad.doubleclick.net/adj/pcw.main.mobile/default;sz=1x3;ord="+ ord;
+				$.getScript(url);
+			}
+	});
+	
+	//Disable default scrolling behavior and toggle on button click.
+	$(window).unbind('.infscr');
+	$(".infscrtrigger").live('vclick',function(event){
+		event.preventDefault();
+		$(this).remove();
+		$('.articleList').infinitescroll('retrieve');
+	});
+}
+

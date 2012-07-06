@@ -14,6 +14,8 @@
 	<script src="js/jquery.mobile-1.1.0.min.js"></script>
 	<script type="text/javascript" src="js/app.js?v=30"></script>
 	<script type="text/javascript" src="js/slidernav.js"></script>
+	<script type="text/javascript" src="js/jquery.infinitescroll.min.js"></script>
+
 	<script type="text/javascript">
 
 	  var _gaq = _gaq || [];
@@ -28,77 +30,183 @@
 	  })();
 
 	</script>
-</head> 
+</head>
 <body>
-	
-	<div id="menu"><!--#include file="menu.html" --></div>
-	
-	
-	<div data-role="page" id="main" class="schedule index" data-theme="a">
+
+	<div data-role="page" id="main" class="home" data-theme="a">
 		
 		<header data-role="header" data-theme="b">
+			<a href="#main" data-direction="reverse" data-role="button" data-theme="b" data-icon="arrow-l" data-iconpos="notext" data-mini="true" data-inline="true"> </a>
 			<h1><a href="/">Mac Forums</a></h1>
+			<a href="/" id="homeBtn" data-role="button" data-theme="b" data-icon="home" data-iconpos="notext">Home</a>
 		</header><!-- /header -->
-		<div class="sponsor"><!--#include file="sponsor.html" --></div>
 
-		<div id="track" class="ui-bar ui-grid-b ui-footer ui-bar-b">Happening Now</div>
+		<div data-role="content" data-theme="b">
 
-		<div data-role="content" data-theme="a">
-			<div class="schedule-wrap">
-				<ul data-role="listview" data-theme="a">
-					<li class="Sales_and_Marketing">
-						<div class="time">9:00 - 9:45am</div>
-						<div class="sesh">
-							<a href="#inline_205">
-								<h3>Some Content Helps, Some Content Hurts</h3>
-								<span class='location'>Location</span>
+			<ul id="tab-nav">
+				<li class="active"><a href="#articles" data-tab="articles">Featured Threads</a></li>
+				<li><a href="#threads" data-tab="threads">Featured Articles</a></li>
+			</ul>
+
+			<div id="tab-content">
+
+				<div id="articles" class="active tab"><!-- AARON TODO: give me an active class if today's the day -->
+					<ul data-role="listview" data-theme="b">
+						<li class="backfill  odd">
+							<a href="/fury.html">
+								<h3>Fury at Apple's 'rip-off' plan to make ALL iPhone accessories obsolete by changing de</h3>
+								<span class="author">pendlewitch &ndash; Jul 04, 2012 &ndash; 38 Comments</span>
 							</a>
-						</div>
-						<a href="#main" data-role="button" data-mini="true" data-icon="false">Give Feedback</a>
-					</li>
-					<li class="Industry_Trends">
-						<div class="time">9:00 - 9:45am</div>
-						<div class="sesh">
-							<a href="#inline_2227">
-								<h3>Hosting Industry Market Overview</h3>
-								<span class='location'>Location</span>
+						</li>
+						<li class="backfill  even">
+							<a href="/other.html">
+								<h3>Magsafe Adapter : Utterly poor quality</h3>
+								<span class="author">bidyut1 &ndash; Jun 26, 2012 &ndash; 6 Comments</span>
 							</a>
-						</div>
-						<a href="#main" data-role="button" data-mini="true" data-icon="false">Give Feedback</a>
-					</li>
-					<li class="Technology">
-						<div class="time">9:00 - 9:45am</div>
-						<div class="sesh">
-							<a href="#inline_210">
-								<h3>Integrating your products to take your company to the next level</h3>
-								<span class='location'>Location</span>
+						</li>
+						<li class="backfill  odd">
+							<a href="#">
+								<h3>Fury at Apple's 'rip-off' plan to make ALL iPhone accessories obsolete by changing de</h3>
+								<span class="author">pendlewitch &ndash; Jul 04, 2012 &ndash; 38 Comments</span>
 							</a>
-						</div>
-						<a href="#main" data-role="button" data-mini="true" data-icon="false">Give Feedback</a>
-					</li>
-					<li class="Management">
-						<div class="time">9:00 - 9:45am</div>
-						<div class="sesh">
-							<a href="#inline_219">
-								<h3>Expert Tips to Use Inbound Marketing and Social Media for Lead Generation</h3>
-								<span class='location'>Location</span>
+						</li>
+						<li class="backfill  even">
+							<a href="#">
+								<h3>Magsafe Adapter : Utterly poor quality</h3>
+								<span class="author">bidyut1 &ndash; Jun 26, 2012 &ndash; 6 Comments</span>
 							</a>
-						</div>
-						<a href="#main" data-role="button" data-mini="true" data-icon="false">Give Feedback</a>
-					</li>
-				</ul>
-			</div><!-- /schedule-wrap -->
+						</li>
+						<li class="backfill  odd">
+							<a href="#">
+								<h3>Fury at Apple's 'rip-off' plan to make ALL iPhone accessories obsolete by changing de</h3>
+								<span class="author">pendlewitch &ndash; Jul 04, 2012 &ndash; 38 Comments</span>
+							</a>
+						</li>
+						<li class="backfill  even">
+							<a href="#">
+								<h3>Magsafe Adapter : Utterly poor quality</h3>
+								<span class="author">bidyut1 &ndash; Jun 26, 2012 &ndash; 6 Comments</span>
+							</a>
+						</li>
+						<li class="backfill  odd">
+							<a href="#">
+								<h3>Fury at Apple's 'rip-off' plan to make ALL iPhone accessories obsolete by changing de</h3>
+								<span class="author">pendlewitch &ndash; Jul 04, 2012 &ndash; 38 Comments</span>
+							</a>
+						</li>
+						<li class="backfill  even">
+							<a href="#">
+								<h3>Magsafe Adapter : Utterly poor quality</h3>
+								<span class="author">bidyut1 &ndash; Jun 26, 2012 &ndash; 6 Comments</span>
+							</a>
+						</li>
+						<li class="backfill  odd">
+							<a href="#">
+								<h3>Fury at Apple's 'rip-off' plan to make ALL iPhone accessories obsolete by changing de</h3>
+								<span class="author">pendlewitch &ndash; Jul 04, 2012 &ndash; 38 Comments</span>
+							</a>
+						</li>
+						<li class="backfill  even">
+							<a href="#">
+								<h3>Magsafe Adapter : Utterly poor quality</h3>
+								<span class="author">bidyut1 &ndash; Jun 26, 2012 &ndash; 6 Comments</span>
+							</a>
+						</li>
+						<li class="loadMoreButton nothumbnail infscrtrigger" data-icon="arrow-r">
+			     			<div class="newsCrawlText">
+			     				<a href="/mobile/news/?&page=2" rel="external" >Show More<span class="ui-icon ui-icon-arrow-r ui-icon-shadow"> </span></a>
+							</div>
+			  			</li>
+						<li class="ad">
+							<div class="sponsor"><!--#include file="sponsor.html" --></div>
+						</li>
+					</ul>
+	
+					<script type="text/javascript">
+						initInfScroller(); //Initialize Infinite Scroller.
+					</script>
+
+				</div>
+
+				<div id="threads" class="tab">
+					<ul data-role="listview" data-theme="b">
+						<li class="backfill  odd">
+							<a href="/fury.html">
+								<h3>Fury at Apple's 'rip-off' plan to make ALL iPhone accessories obsolete by changing de</h3>
+								<span class="author">pendlewitch &ndash; Jul 04, 2012 &ndash; 38 Comments</span>
+							</a>
+						</li>
+						<li class="backfill  even">
+							<a href="/other.html">
+								<h3>Magsafe Adapter : Utterly poor quality</h3>
+								<span class="author">bidyut1 &ndash; Jun 26, 2012 &ndash; 6 Comments</span>
+							</a>
+						</li>
+						<li class="backfill  odd">
+							<a href="#">
+								<h3>Fury at Apple's 'rip-off' plan to make ALL iPhone accessories obsolete by changing de</h3>
+								<span class="author">pendlewitch &ndash; Jul 04, 2012 &ndash; 38 Comments</span>
+							</a>
+						</li>
+						<li class="backfill  even">
+							<a href="#">
+								<h3>Magsafe Adapter : Utterly poor quality</h3>
+								<span class="author">bidyut1 &ndash; Jun 26, 2012 &ndash; 6 Comments</span>
+							</a>
+						</li>
+						<li class="backfill  odd">
+							<a href="#">
+								<h3>Fury at Apple's 'rip-off' plan to make ALL iPhone accessories obsolete by changing de</h3>
+								<span class="author">pendlewitch &ndash; Jul 04, 2012 &ndash; 38 Comments</span>
+							</a>
+						</li>
+						<li class="backfill  even">
+							<a href="#">
+								<h3>Magsafe Adapter : Utterly poor quality</h3>
+								<span class="author">bidyut1 &ndash; Jun 26, 2012 &ndash; 6 Comments</span>
+							</a>
+						</li>
+						<li class="backfill  odd">
+							<a href="#">
+								<h3>Fury at Apple's 'rip-off' plan to make ALL iPhone accessories obsolete by changing de</h3>
+								<span class="author">pendlewitch &ndash; Jul 04, 2012 &ndash; 38 Comments</span>
+							</a>
+						</li>
+						<li class="backfill  even">
+							<a href="#">
+								<h3>Magsafe Adapter : Utterly poor quality</h3>
+								<span class="author">bidyut1 &ndash; Jun 26, 2012 &ndash; 6 Comments</span>
+							</a>
+						</li>
+						<li class="backfill  odd">
+							<a href="#">
+								<h3>Fury at Apple's 'rip-off' plan to make ALL iPhone accessories obsolete by changing de</h3>
+								<span class="author">pendlewitch &ndash; Jul 04, 2012 &ndash; 38 Comments</span>
+							</a>
+						</li>
+						<li class="backfill  even">
+							<a href="#">
+								<h3>Magsafe Adapter : Utterly poor quality</h3>
+								<span class="author">bidyut1 &ndash; Jun 26, 2012 &ndash; 6 Comments</span>
+							</a>
+						</li>
+						<li class="loadMoreButton nothumbnail infscrtrigger" data-icon="arrow-r">
+			     			<div class="newsCrawlText">
+			     				<a href="/mobile/news/?&page=2" rel="external" >Show More<span class="ui-icon ui-icon-arrow-r ui-icon-shadow"> </span></a>
+							</div>
+			  			</li>
+						<li class="ad">
+							<div class="sponsor"><!--#include file="sponsor.html" --></div>
+						</li>
+					</ul>
+				</div>
+
+			</div><!-- /tab-content -->
+		
+
 		</div><!-- /content -->
 		
-		<footer data-role="footer" class="footer">
-			logo<br>
-			Copyright &copy; 2012 iNET Interactive. All rights reserved.<br>
-			<ul>
-				<li><a href="/">Full Site</a></li>
-				<li><a href="/privacy.html">Privacy Policy</a></li>
-				<li><a href="/terms.html">Terms of Use</a></li>
-			</ul>
-    	</footer>
+		<!--#include file="footer.html" -->
 
 	</div><!-- /page -->
 

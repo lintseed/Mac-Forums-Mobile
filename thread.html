@@ -33,7 +33,7 @@
 </head>
 <body>
 
-	<div data-role="page" id="index" class="article" data-theme="a">
+	<div data-role="page" id="thread" class="article" data-theme="a">
 		
 		<header data-role="header" data-theme="b">
 			<a href="#main" data-direction="reverse" data-role="button" data-theme="b" data-icon="arrow-l" data-iconpos="notext" data-mini="true" data-inline="true"> </a>
@@ -44,15 +44,9 @@
 
 		<div data-role="content" data-theme="b">
 
-			<article id="post-1073" class="post-1073 post type-post status-publish format-standard hentry category-uncategorized tag-homepage tag-tips">
+			<article id="thread-id" class="hentry">
 		
 				<header class="entry-header">
-				
-					<h1 class="entry-title"><span>Simple Print Server using Automator and Dropbox</span></h1>
-
-					<div class="postInfo">
-						<a class="author vcard url fn n" href="http://www.mac-forums.com/blog/author/vansmith/" title="View all posts by vansmith" rel="author">vansmith</a> - <time class="entry-date" datetime="2012-05-20T11:40:13+00:00" pubdate>May 20, 2012</time> - <a href="#respond">3 Comments</a>
-					</div><!-- .postInfo -->
 
 					<div class="entry-meta">
 						<div class="socialbuttons">
@@ -101,93 +95,27 @@
 						</div>	
 
 					</div>
+
+					<h1 class="entry-title"><span>Simple Print Server using Automator and Dropbox</span></h1>
+
+					<div class="postInfo">
+						<a class="author vcard url fn n" href="http://www.mac-forums.com/blog/author/vansmith/" title="View all posts by vansmith" rel="author">vansmith</a> - <time class="entry-date" datetime="2012-05-20T11:40:13+00:00" pubdate>May 20, 2012 - 9:00pm</time> - <a href="#respond">3 Comments</a>
+					</div><!-- .postInfo -->
+
 				</header><!-- .entry-header -->
 
 				<div class="entry-content">
 
-					<p><strong>Introduction<br />
-					</strong>I was recently reading <a href="http://arstechnica.com/getting-it-done/2012/05/getting-started-with-cloud-print.ars" target="_blank">this</a> article on Ars Technica about Google Cloud Print and was inspired by the second last sentence:</p>
-					<blockquote><p>Or, if you&#8217;re a Dropbox user on OS X and feel more comfortable setting things up yourself, you can use Automator to automatically print any file synced to a local Dropbox folder.</p></blockquote>
-					<p>I wanted to see how well this would work and after doing some quick work in Automator along with some simple testing, I found an easy way to set up a &#8220;print server&#8221; using Dropbox and Automator (the quotations are purposive since this isn&#8217;t really a print server in the traditional sense).</p>
-					<p><strong>Goal<br />
-					</strong>By the end of this article, you will have set up a folder action for a Dropbox folder such that anything added to it will be printed. With this set up, you&#8217;ll be able to print documents from anywhere in the world and/or print content from mobile devices that are supported by Dropbox. With that said, let&#8217;s get started!</p>
-					<p><strong>Automator</strong><br />
-					Open up Automator and create a &#8220;Folder Action.&#8221; In the window that appears, you&#8217;ll need to choose the folder that you want to serve as the directory that will house the content that will be printed (remember, this has to be in your Dropbox folder).</p>
-					<p><a href="http://www.mac-forums.com/blog/wp-content/uploads/2012/05/automator_dir.png"><img class="aligncenter size-large wp-image-1082" title="automator_dir" src="http://www.mac-forums.com/blog/wp-content/uploads/2012/05/automator_dir-1024x679.png" alt="" /></a></p>
-					<p>There is only one action that you need to add here: the &#8220;Print Finder Items&#8221; action. Add that and you&#8217;re done. Your final automation should look something like the following:</p>
-					<p><a href="http://www.mac-forums.com/blog/wp-content/uploads/2012/05/print_final.jpg"><img class="aligncenter size-full wp-image-1084" title="print_final" src="http://www.mac-forums.com/blog/wp-content/uploads/2012/05/print_final.jpg" alt="" /></a>Save it and give it a name. Once this is done, your &#8220;print server&#8221; is ready to go. Give it a try &#8211; add a document to the folder you set to watch above. Wait for the file to sync over and once that&#8217;s done, the file should start printing (it will take a few seconds for the file to start printing).</p>
-					<p><strong>Example</strong> <strong>Scenario<br />
-					</strong>Let&#8217;s say that someone emailed you a PDF and you got the email on your iPod Touch/iPhone/iPad. You&#8217;d love to print it without having to go over to your computer but you don&#8217;t have an <a href="http://support.apple.com/kb/ht4356" target="_blank">AirPrint</a> capable printer. This is the perfect time to use your Dropbox/Folder Action solution.</p>
-					<p>Open up the email that you received:</p>
-					<p><a href="http://www.mac-forums.com/blog/wp-content/uploads/2012/05/one.png"><img class="aligncenter size-full wp-image-1086" title="one" src="http://www.mac-forums.com/blog/wp-content/uploads/2012/05/one.png" alt="" /></a>Click on the attachment:</p>
-					<p><a href="http://www.mac-forums.com/blog/wp-content/uploads/2012/05/two.png"><img class="aligncenter size-full wp-image-1087" title="two" src="http://www.mac-forums.com/blog/wp-content/uploads/2012/05/two.png" alt="" /></a> Once the attachment is open, click the export button in the top right to get the following:</p>
-					<p><a href="http://www.mac-forums.com/blog/wp-content/uploads/2012/05/three.png"><img class="aligncenter size-full wp-image-1088" title="three" src="http://www.mac-forums.com/blog/wp-content/uploads/2012/05/three.png" alt="" /></a> Click the &#8220;Open in&#8230;&#8221; button and you&#8217;ll see something similar to the following:</p>
-					<p><a href="http://www.mac-forums.com/blog/wp-content/uploads/2012/05/four.png"><img class="aligncenter size-full wp-image-1089" title="four" src="http://www.mac-forums.com/blog/wp-content/uploads/2012/05/four.png" alt="" /></a>Select the Dropbox option and Dropbox will open. Select the folder (in my case, it&#8217;s called &#8220;Print&#8221;) and upload the attachment:</p>
-					<p><a href="http://www.mac-forums.com/blog/wp-content/uploads/2012/05/five.png"><img class="aligncenter size-full wp-image-1090" title="five" src="http://www.mac-forums.com/blog/wp-content/uploads/2012/05/five.png" alt="" /></a></p>
-					<p>Give the attachment a few seconds (or minutes) to upload the file to Dropbox and download onto your Mac. Once that is complete, the folder action will execute and the file should start printing.</p>
-					<p>That&#8217;s it! Enjoy printing from any mobile device that works with Dropbox or from any computer that is linked to your Dropbox account.<strong><br />
-					</strong></p>
+					<p>I was recently reading <a href="http://arstechnica.com/getting-it-done/2012/05/getting-started-with-cloud-print.ars" target="_blank">this</a> article on Ars Technica about Google Cloud Print and was inspired by the second last sentence:</p>
 				</div><!-- .entry-content -->
-
-				<footer class="entry-footer">
-					<div class="entry-meta">
-					
-						<div class="socialbuttons">
-							
-							<div class="gPlus">
-								<!-- Place this tag where you want the +1 button to render -->
-								<g:plusone size="medium"></g:plusone>
-
-								<!--  Place this tag after the last plusone tag -->
-								<script type="text/javascript">
-								  (function() {
-									var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-									po.src = 'https://apis.google.com/js/plusone.js';
-									var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-								  })();
-								</script>
-							</div>
-							
-							<div class="twitter">
-								<a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
-							</div>
-								
-							<div class="face">
-								<div id="fb-root"><script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like href="http://www.mac-forums.com/forums/forumdisplay.php?f=$foruminfo[forumid]" layout="button_count" width="75"></fb:like></div>
-								
-								<script>
-									window.fbAsyncInit = function() {
-										FB.init({
-										appId: 'your app id',
-										status: true, 
-										cookie: true,
-										xfbml: true,
-										channelUrl: window.location.protocol + '//www.mac-forums.com/facebook_xd_reciever.html'  // custom channel
-									});
-									};
-										(function() {
-										var e = document.createElement('script'); e.async = true;
-										e.src = document.location.protocol +
-										'//connect.facebook.net/en_US/all.js';
-										document.getElementById('fb-root').appendChild(e);
-									}());
-								</script>
-							</div>
-							
-							<span class='st_email_button' displayText='Email'></span>	
-						</div>	
-
-					</div>
-
-				</footer><!-- .entry-meta -->
 				
-			</article><!-- #post-1073 -->
+			</article>
 								
 
 			<div id="comments">
-						<h2 id="comments-title">3 Comments:<a name="respond">&nbsp;</a></h3>
+				<h2 id="comments-title">Replies<a name="respond">&nbsp;</a></h3>
 					<ol class="commentlist">
-												<li id="comment-1407050" class="comment odd">
+						<li id="comment-1407050" class="comment odd">
 							<div class="comment-author vcard">
 								<a href="http://www.mac-forums.com/forums/member.php?u=40142" class="comment-author">louishen</a> - 
 								<a href="http://www.mac-forums.com/forums/showthread.php?p=1407050">May 20, 2012 at 05:00 PM</a>
